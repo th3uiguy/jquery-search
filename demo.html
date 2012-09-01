@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>jQuery Search</title>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.22/themes/base/jquery-ui.css" type="text/css" />
+	<link rel="stylesheet" href="jquery.search.css" type="text/css" media="all" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="jquery.search.js"></script>
+	<script type="text/javascript">
+$(function(){
+	$('#ajaxSearch').search({
+		placeholder: "Type the name of a city...",
+		onSubmit: function(input){
+			simulateAjax(input.value, function(result){
+				var html = "";
+				for(var i in result.geonames){
+					var item = result.geonames[i];
+					var cityStr = item.name + (item.adminName1 ? ", " + item.adminName1 : "") + ", " + item.countryName;
+					html += '<li><a href="http://www.google.com/maps?q=' + encodeURI(cityStr) + '">' + cityStr + '</a></li>';
+				}
+				$('#ajaxResult').html(html);
+			});
+		}
+	});
+
+	$('#googleSearch').search({ placeholder: "Search Google" });
+});
+
+function simulateAjax(term, callback){
+	$.ajax({
+		url: "http://ws.geonames.org/searchJSON",
+		dataType: "jsonp",
+		data: {
+			featureClass: "P",
+			style: "full",
+			maxRows: 12,
+			name_startsWith: term
+		},
+		success: callback
+	});
+}
+	</script>
+	<style type="text/css">
+body{ font-size: 0.9em; font-family: Arial, Verdana, sans-serif; color:#555; }
+h1{ margin-top: 0; }
+fieldset{ background: #eee; border: 1px solid #ccc; }
+.ks-container{ margin: 0.2em 0 0.5em; }
+input.ks-submit{ font-size: 0.8em; padding:0.2em 0.8em; }
+ul{ list-style: none; margin: 0; padding: 0; background-color: #fff; }
+ul li{ border: 1px solid #ccc; border-bottom: none; }
+ul li:last-child{ border-bottom: 1px solid #ccc; }
+ul li a{ display: block; padding: 0.3em 0.6em; text-decoration: none; }
+ul li a:hover{ background-color: #ffc; }
+	</style>
+</head>
+<body>
+	<h1>jQuery Search Demo</h1>
+	<h2>With Submit Button</h2>
+	<form id="googleSearch" action="https://www.google.com/search" method="get">
+		<input type="text" name="q" />
+		<input type="submit" value="Search" />
+	</form>
+	<br />
+
+	<h2>Without Submit Button (AJAX)</h2>
+	<fieldset>
+		<input id="ajaxSearch" type="text" />
+		<ul id="ajaxResult"></ul>
+	</fieldset>
+</body>
+</html>
