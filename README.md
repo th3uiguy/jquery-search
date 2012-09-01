@@ -27,7 +27,7 @@ $('input#search').search({
 Options
 ---------------------
 #### placeholder ####
-*type: Stringr*   
+*type: String*   
 *default: Keyword Search*
 
 #### submitButton ####
