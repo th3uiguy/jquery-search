@@ -1,3 +1,18 @@
+/**
+* jQuery Search
+*
+* @fileoverview Converts an input into a search field that can run off a normal form submit or AJAX load.
+* @link https://github.com/th3uiguy/jquery-search
+* @author Spencer Neese
+* @version 1.0
+* @requires jQuery UI 1.7+ and jQuery 1.3.2+
+* @license jQuery Search Plugin v1.0
+*
+* Copyright 2011, Spencer Neese
+* Dual licensed under the MIT or GPL Version 2 licenses.
+* <https://raw.github.com/th3uiguy/jquery-search/master/GPL-LICENSE.txt> <https://raw.github.com/th3uiguy/jquery-search/master/MIT-LICENSE.txt>
+*/
+
 ;(function($) {
 
 	$.fn.search = function(options) {
