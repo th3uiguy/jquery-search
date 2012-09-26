@@ -4,11 +4,11 @@
 * @fileoverview Converts an input into a search field that can run off a normal form submit or AJAX load.
 * @link https://github.com/th3uiguy/jquery-search
 * @author Spencer Neese
-* @version 1.5
+* @version 1.5.1
 * @requires jQuery UI 1.7+ and jQuery 1.3.2+
 * @license jQuery Search Plugin
 *
-* Copyright 2011, Spencer Neese
+* Copyright 2012, Spencer Neese
 * Dual licensed under the MIT or GPL Version 2 licenses.
 * <https://raw.github.com/th3uiguy/jquery-search/master/GPL-LICENSE.txt> <https://raw.github.com/th3uiguy/jquery-search/master/MIT-LICENSE.txt>
 */
@@ -33,7 +33,8 @@
 	border: none;
 	float:left;
 	font-size:1.2em;
-	padding:0.2em 0;
+	padding:0.3em 0;
+	margin:0;
 	width:73%;
 	outline: none;
 	background:none;
