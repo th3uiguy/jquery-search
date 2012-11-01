@@ -13,7 +13,6 @@
 * <https://raw.github.com/th3uiguy/jquery-search/master/GPL-LICENSE.txt> <https://raw.github.com/th3uiguy/jquery-search/master/MIT-LICENSE.txt>
 */
 
-
 ;(function($) {
 $.widget( "ui.search", {
 

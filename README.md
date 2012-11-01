@@ -36,7 +36,7 @@ Options
 
 #### autoSubmit ####
 *type: Boolean*   
-*default: **true** if there is no submit button, otherwise **false***   
+*default: `true` if there is no submit button, otherwise `false`*   
 
 #### delay ####
 *type: Integer*   
@@ -52,9 +52,11 @@ Options
 
 
 
+
 Method
 ---------------------
 #### isBlank ####
+Returns `true` if the input is empty or contains the placeholder text.   
 *return: Boolean*   
 ```js
 	var phraseIsBlank = $('input#search').search('isBlank');
