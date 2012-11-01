@@ -1,7 +1,7 @@
 jQuery Search
 ====================
 By: Spencer Neese [https://github.com/th3uiguy/](https://github.com/th3uiguy/)   
-Version: 1.5.1   
+Version: 1.5.2   
 Requires: jQuery UI 1.7+ and jQuery 1.3.2+   
 Demo: [http://jsfiddle.net/th3uiguy/TDaHj/](http://jsfiddle.net/th3uiguy/TDaHj/)   
 Git: [https://github.com/th3uiguy/jquery-search.git](https://github.com/th3uiguy/jquery-search.git)   
@@ -36,7 +36,7 @@ Options
 
 #### autoSubmit ####
 *type: Boolean*   
-*default: false*
+*default: **true** if there is no submit button, otherwise **false***   
 
 #### delay ####
 *type: Integer*   
@@ -50,6 +50,15 @@ Options
 *type: function*   
 *default: null*
 
+
+
+Method
+---------------------
+#### isBlank ####
+*return: Boolean*   
+```js
+	var phraseIsBlank = $('input#search').search('isBlank');
+```
 
 
 
