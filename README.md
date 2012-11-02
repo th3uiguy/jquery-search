@@ -67,5 +67,5 @@ Returns `true` if the input is empty or contains the placeholder text.
 <br /><br />
 Copyright (c) 2012, Spencer Neese [https://github.com/th3uiguy/](https://github.com/th3uiguy/)   
 Dual licensed under the 
-[MIT](https://raw.github.com/th3uiguy/jquery-search/master/MIT-LICENSE.txt) or 
+[MIT](https://raw.github.com/th3uiguy/jquery-search/master/MIT-LICENSE.txt) and 
 [GPL](https://raw.github.com/th3uiguy/jquery-search/master/GPL-LICENSE.txt) Version 2 licenses. 
